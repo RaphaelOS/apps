@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Class </title>
+	<link rel="stylesheet" href="">
+	<script>
+
+
+		class Pessoa{
+
+			constructor(nome, sobrenome, altura, peso, idioma, nascimento){
+
+				this.nome = nome;
+				this.sobrenome = sobrenome;
+				this.altura = altura;
+				this.peso = peso;
+				this.idioma = idioma;
+				this.nascimento = new Date(nascimento);
+
+			}
+			mostrar (){
+
+				console.log(this.nome);
+				console.log(this.sobrenome);
+				console.log(this.altura);
+				console.log(this.peso);
+				console.log(this.idioma);
+				console.log(this.nascimento);
+
+			}
+
+
+		}
+		pessoas = [
+		Pessoa1 = new Pessoa("Fernando", "Silveira", 1.72 , 62,2, "Portugês - Brasil", '1991/12/13' ),
+		
+		Pessoa2 = new Pessoa("Larissa", "Ferreira", 1.62, 65, "Inglês - Americano", '1994/02/12' )
+		
+		Pessoa3 = new Pessoa("Raphael", "Oliveira", 1.70, 80, "Portugês - Brasil" '1994/12/01')
+		
+		Pessoa4 = new Pessoa("Melyssa", "Barbosa", 1.65 , 80, "Português - Brasil" '1994/07/18');
+		
+		];
+
+		function mostrarTudo(){
+			for (var a = 0; a < pessoas.length ; a++) {
+
+				document.getElementById('result').innerHTML += "<tr>"+ "<td>"+ pessoas[a].nome+"<td> + </tr>";
+			}
+		}
+	</script>
+</head>
+<body onload="mostrarTudo()">
+
+	<h1>Classes
+
+	</h1>
+	<table border=1 id="result">
+		<tr>
+			<th colspan=1> Nome </th>
+		</tr>
+		
+	</table>	
+</body>
+</html>
